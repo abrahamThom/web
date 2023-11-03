@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Input to <p> Tag</title>
+</head>
+<body>
+
+    <input type="text" id="userInput" placeholder="Enter text">
+    <button onclick="displayText()">Display</button>
+    <p id="output"></p>
+
+    <script>
+        function displayText() {
+            var userInput = document.getElementById("userInput").value;
+
+           
+            var output = document.getElementById("output");
+
+           
+            output.innerHTML = userInput;
+        }
+    </script>
+	
+</body>
+</html>
