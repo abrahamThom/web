@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker</title>
+</head>
+<body>
+    <div id="colorDiv">
+        This is the colored div.
+    </div>
+
+    <button onclick="pickColor()">Change Color</button>
+
+    <script>
+        function pickColor() {
+            // Prompt the user for a color input
+            var userColor = prompt("Enter a color (e.g., 'red', '#00FF00', 'rgb(255, 0, 0)'):");
+
+            // Check if the user entered a color
+            if (userColor !== null && userColor !== "") {
+                // Set the background color of the div to the user's choice
+                var colorDiv = document.getElementById("colorDiv");
+                colorDiv.style.backgroundColor = userColor;
+            }
+        }
+    </script>
+</body>
+</html>

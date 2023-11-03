@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text Color on Button Click</title>
+</head>
+<body>
+    <button id="changeColorButton">Change Text Color</button>
+    <p id="textToChange">This is the text whose color will change.</p>
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+    
+       var changeColorButton = document.getElementById("changeColorButton");
+       var textToChange = document.getElementById("textToChange");
+
+    
+       changeColorButton.addEventListener("click", function() {
+       
+        var randomColor = getRandomColor();
+
+       
+        textToChange.style.color = randomColor;
+       });
+
+    
+       function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+     });
+</script>
+</body>
+</html>

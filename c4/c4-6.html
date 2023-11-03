@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+</head>
+<body>
+    <button id="changeColorButton">Change Color</button>
+    <div id="targetElement" style="width: 2000px; height: 2000px; background-color: lightblue;"></div>
+
+    <script>
+	
+        const changeColorButton = document.getElementById("changeColorButton");
+         const targetElement = document.getElementById("targetElement");
+
+
+          function changeBackgroundColor() {
+    
+          const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    
+    
+            targetElement.style.backgroundColor = randomColor;
+           }
+
+ 
+         changeColorButton.addEventListener("click", changeBackgroundColor);
+     </script>
+</body>
+</html>
+
+
+
+
+
+var x = document.getElementById("text").value; 
+    	document.getElementById("y").style.color = x;	 
+}
+<button onClick="myFunction()">Set Color</button>

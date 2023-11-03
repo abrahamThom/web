@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph Background Color</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #color-form {
+            margin: 20px;
+        }
+        p {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+  
+
+    <form id="color-form">
+        <label for="colorPicker">Select Background Color:</label>
+        <input type="color" id="colorPicker">
+        <button type="button" onclick="changeBackgroundColor()">Apply Color</button>
+    </form>
+
+    <p id="output-paragraph">This is a sample paragraph.</p>
+
+    <script>
+        function changeBackgroundColor() {
+            
+            const colorPicker = document.getElementById("colorPicker");
+            const selectedColor = colorPicker.value;
+
+            
+            const outputParagraph = document.getElementById("output-paragraph");
+            outputParagraph.style.color = selectedColor;
+        }
+    </script>
+</body>
+</html>
